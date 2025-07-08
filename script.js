@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const learnMoreBtn = document.getElementById('learnMoreBtn');
     const animatedTextContainer = document.getElementById('animatedTextContainer');
-    const textToAnimate = "Music"; // The text we want to display
+    const textToAnimate = "Music !"; // The text we want to display
 
     learnMoreBtn.addEventListener('click', () => {
         // Clear previous content if button is clicked again
