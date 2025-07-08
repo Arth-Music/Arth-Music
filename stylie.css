@@ -1,0 +1,113 @@
+/* Basic styling for the entire page */
+body {
+    font-family: 'Playfair Display', serif; /* Use a beautiful serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Make sure it takes full viewport height */
+    overflow: hidden; /* Hide overflow for animation */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent background for content box */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); /* Subtle glow effect */
+    max-width: 90%;
+    margin: 20px;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    width: 180px; /* Adjust size as needed */
+    height: 180px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes it round */
+    border: 5px solid #00ffff; /* Cyan border */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    margin-bottom: 20px;
+    display: block; /* Centers the image */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glow for the image */
+}
+
+/* Site Title Styling */
+.site-title {
+    font-family: 'Montserrat', sans-serif; /* A strong, modern font for the title */
+    font-size: 3em; /* Larger font size */
+    margin-top: 10px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Text glow */
+}
+
+/* Learn More Button Styling */
+.learn-more-button {
+    background-color: #00ffff; /* Cyan button */
+    color: #000000; /* Black text on button */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px; /* Pill-shaped button */
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4); /* Button shadow */
+    margin-bottom: 30px;
+}
+
+.learn-more-button:hover {
+    background-color: #00e6e6; /* Slightly darker cyan on hover */
+    transform: translateY(-3px); /* Lift button on hover */
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Hidden Text Container */
+.hidden-text-container {
+    display: flex; /* Arrange words side-by-side */
+    justify-content: center;
+    gap: 30px; /* Space between "Music" and "Sing" */
+    font-size: 2.5em; /* Large text */
+    font-weight: 700;
+    overflow: hidden; /* Crucial for the reveal effect */
+    height: 0; /* Initially hidden */
+    transition: height 0.6s ease-out; /* Smooth reveal of the container */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.hidden-text-container.show {
+    height: 60px; /* Adjust height based on content to show */
+    /* You might need to adjust this if your font size or text changes */
+    /* A safe bet is to make it slightly larger than the text line-height */
+}
+
+/* Animated Text Styling (for the "uncovering" effect) */
+.animated-text {
+    position: relative;
+    display: inline-block; /* Essential for span elements */
+    color: #ff00ff; /* Magenta color for the text */
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+}
+
+.animated-text::before {
+    content: attr(data-text); /* Use the actual text for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Initially covered */
+    height: 100%;
+    color: #ff00ff; /* Text color */
+    overflow: hidden;
+    white-space: nowrap; /* Prevent text from wrapping inside the reveal */
+    transition: width 1s ease-out; /* Smooth reveal animation */
+}
+
+/* Animation trigger class */
+.animated-text.reveal::before {
+    width: 100%; /* Fully reveal the text */
+}
