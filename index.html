@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicArth - My Homepage</title>
+    <!-- UPDATED: Browser tab title -->
+    <title>MusicArth</title>
+
+    <!-- NEW: Favicon link -->
+    <!-- This tells the browser to use your New Main Logo.png as the tab icon -->
+    <link rel="icon" type="image/png" href="New Main Logo.png">
+
+    <!-- Google Fonts for a nice font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <!-- Ensure 'New Main Logo.png' is in the root of your repository -->
         <img src="New Main Logo.png" alt="MusicArth Profile Picture" class="profile-pic">
         <h1 class="site-title">MusicArth</h1>
         <button id="learnMoreBtn" class="learn-more-button">Learn More</button>
+        <!-- This container will be populated with "Music" by JavaScript -->
         <div id="animatedTextContainer" class="animated-text-container"></div>
     </div>
 
+    <!-- Link to your JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
