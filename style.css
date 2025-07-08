@@ -17,7 +17,7 @@ body {
     padding: 30px; /* Increased padding */
     background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent background for content box */
     border-radius: 15px;
-    /* Added a visible rectangular border */
+    /* Visible rectangular border */
     border: 2px solid rgba(0, 255, 255, 0.5); /* Cyan border with some transparency */
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.4); /* More prominent glow effect */
     max-width: 90%;
@@ -75,7 +75,7 @@ body {
     font-size: 2.8em; /* Large text */
     font-weight: 700;
     text-align: center;
-    color: #ffffff; /* White text, no pink highlight */
+    color: #00ffcc; /* NEW: Beautiful Aquamarine color for the text */
     min-height: 1.5em; /* Ensure space for text even when hidden */
     overflow: hidden; /* Hide overflow for clean appearance */
 }
