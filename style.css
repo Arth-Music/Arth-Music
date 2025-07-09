@@ -59,7 +59,7 @@ body {
     font-size: 1.3em; /* Slightly larger font */
     font-weight: bold;
     transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0 6px 18px rgba(0, 255, 255, 0.5); /* More prominent button shadow */
+    box-shadow: 0 6px 18px rgba(0, 255, 255, 0.5); /* Button shadow */
     margin-bottom: 35px; /* Increased margin */
 }
 
@@ -69,13 +69,22 @@ body {
     box-shadow: 0 10px 25px rgba(0, 255, 255, 0.7); /* More prominent shadow on hover */
 }
 
+/* NEW: Remove the default blue outline on focus/click */
+.learn-more-button:focus {
+    outline: none; /* Removes the default browser outline */
+    /* You could add an alternative visual cue here if needed for accessibility,
+       e.g., a subtle inner shadow or a different border color, but for a simple
+       button, 'none' is often preferred for aesthetics. */
+}
+
+
 /* Animated Text Container */
 .animated-text-container {
     font-family: 'Playfair Display', serif; /* Consistent beautiful font */
     font-size: 2.8em; /* Large text */
     font-weight: 700;
     text-align: center;
-    color: #00ffcc; /* NEW: Beautiful Aquamarine color for the text */
+    color: #00ffcc; /* Aquamarine color for the text */
     min-height: 1.5em; /* Ensure space for text even when hidden */
     overflow: hidden; /* Hide overflow for clean appearance */
 }
